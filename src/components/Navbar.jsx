@@ -47,7 +47,7 @@ function Navbar() {
             type="text"
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search members"
-            class="input input-bordered"
+            className="input input-bordered"
           />
           <ul
             tabIndex="0"
@@ -66,8 +66,8 @@ function Navbar() {
               })
               .map((user, index) => (
                 <li key={index}>
-                  <div class="avatar">
-                    <div class="w-8 rounded">
+                  <div className="avatar">
+                    <div className="w-8 rounded">
                       <img src={user.avatar} alt="" />
                     </div>
 
