@@ -3,6 +3,7 @@ import { BsFillHouseFill } from 'react-icons/bs'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux/es/exports'
 import { login, reset } from '../features/auth/authSlice'
+import { toast } from 'react-toastify'
 
 function Login() {
   const [section, setSection] = useState(0)
@@ -23,7 +24,7 @@ function Login() {
 
   useEffect(() => {
     if (isError) {
-      console.log(message)
+      toast.error(message)
     }
 
     if (isSuccess || user) {
