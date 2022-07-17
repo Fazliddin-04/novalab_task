@@ -8,6 +8,7 @@ import pattern from '../assets/hollowed-boxes.png'
 import Footer from '../components/Footer'
 
 function Profile() {
+  // eslint-disable-next-line no-unused-vars
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   )

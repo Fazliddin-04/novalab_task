@@ -24,6 +24,7 @@ function Navbar() {
       const response1 = await axios.get('https://reqres.in/api/users')
       const response2 = await axios.get('https://reqres.in/api/users?page=2')
       if (response1.data && response2.data) {
+        // eslint-disable-next-line array-callback-return
         response1.data.data.map((e) => {
           response2.data.data.push(e)
         })
@@ -53,6 +54,7 @@ function Navbar() {
             className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-68 max-h-96 overflow-y-scroll"
           >
             {data
+              // eslint-disable-next-line array-callback-return
               ?.filter((user) => {
                 if (query === '') {
                   return user

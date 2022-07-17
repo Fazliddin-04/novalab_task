@@ -16,6 +16,7 @@ function Login() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  // eslint-disable-next-line no-unused-vars
   const { user, isLoading, isError, isSuccess, message } = useSelector(
     (state) => state.auth
   )
